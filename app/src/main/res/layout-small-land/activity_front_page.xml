@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/front_page_layout"
+    android:background="@drawable/bg"
+    android:padding="30dp"
+    >
+
+    <Button
+        android:id="@+id/simple_questions"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_effect"
+        android:text="Simple Questions"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:layout_alignLeft="@+id/tough_questions" />
+
+    <Button
+        android:id="@+id/tough_questions"
+        android:layout_width="60dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/simple_questions"
+        android:layout_marginBottom="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_effect"
+        android:text="Tough Questions"
+        android:textAllCaps="false"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/other_app"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/simple_questions"
+        android:background="@drawable/button_effect"
+        android:text="See our other app"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:layout_alignLeft="@+id/rate" />
+
+    <Button
+        android:id="@+id/rate_app"
+        android:layout_width="70dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/other_app"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tough_questions"
+        android:background="@drawable/button_effect"
+        android:text="Rate App"
+        android:textAllCaps="false"
+        android:textSize="10sp" />
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/front_page_layout"
+    android:background="@drawable/bg"
+    >
+
+    <Button
+        android:id="@+id/simple_questions"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_effect"
+        android:text="Simple Questions"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:layout_marginTop="40dp"
+
+        />
+
+    <Button
+        android:id="@+id/tough_questions"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_effect"
+        android:text="Tough Questions"
+        android:textAllCaps="false"
+        android:textSize="10sp"
+        android:layout_below="@id/simple_questions"
+
+
+
+        />
+
+    <Button
+        android:id="@+id/other_app"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:background="@drawable/button_effect"
+        android:text="See our other app"
+        android:textAllCaps="false"
+        android:layout_below="@id/tough_questions"
+
+
+        />
+
+    <Button
+        android:id="@+id/rate_app"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:background="@drawable/button_effect"
+        android:text="Rate App"
+        android:textAllCaps="false"
+        android:layout_below="@id/other_app"
+
+        />
+
+</RelativeLayout>
