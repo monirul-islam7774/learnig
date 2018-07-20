@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_ans">
+        <item>Android is an open-source,
+            linux-based operating system that is used
+            in mobiles, tablets, televisions etc.
+        </item>
+        <item>
+            Andy Rubin.
+        </item>
+        <item>
+           Following is a list of components of Android application architecture:
+
+            Services: Used to perform background functionalities.
+            Intent: Used to perform the inter connection between activities
+                    and the data passing mechanism.
+            Resource Externalization: strings and graphics.
+            Notification: light, sound, icon, notification, dialog box and toast.
+            Content Providers: It will share the data between applications.
+        </item>
+        <item>
+            Aestro
+            Blender
+            Cupcake
+            Donut
+            Eclair
+            Froyo
+            Gingerbread
+            Honycomb
+            Ice Cream Sandwitch
+            Jelly Bean
+            Kitkat
+            Lollipop
+            Marshmallow
+            Nougat
+            Oreo
+        </item>
+        <item>
+            Open-source: It means no licence, distribution and development fee.
+
+            Platform-independent: It supports windows, mac and linux platforms.
+
+            Supports various technologies: It supports camera, bluetooth, wifi,
+                         speech, EDGE etc. technologies.
+
+            Highly optimized Virtual Machine: Android uses highly optimized virtual machine
+                         for mobile devices, called DVM (Dalvik Virtual Machine).
+        </item>
+        <item>
+            Yes, android app can be developed in C/C++ also using android NDK (Native Development Kit).
+            It makes the performance faster. It should be used with android SDK.
+        </item>
+        <item>
+            The core building blocks of android are:
+
+                Activity
+                View
+                Intent
+                Service
+                Content Provider
+                Fragment etc.
+        </item>
+        <item>
+            Activity is like a frame or window in java that represents GUI.
+            It represents one screen of android.
+        </item>
+        <item>
+            There are 7 life-cycle methods of activity. They are as follows:
+
+            onCreate()
+            onStart()
+            onResume()
+            onPause()
+            onStop()
+            onRestart()
+            onDestroy()
+        </item>
+        <item>
+            It is a kind of message or information that is passed to the components.
+            It is used to launch an activity, display a web page, send sms, send email etc.
+            There are two types of intents in android:
+
+            Implicit Intent
+            Explicit Intent
+        </item>
+
+    </string-array>
+</resources>

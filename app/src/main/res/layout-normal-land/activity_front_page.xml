@@ -4,16 +4,27 @@
     android:layout_height="match_parent"
     android:id="@+id/front_page_layout"
     android:background="@drawable/bg"
-    android:padding="30dp"
     >
+    <TextView
+        android:id="@+id/title_app"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/app_name"
+        android:textColor="#c2c2c2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="#7a484848"
+        android:gravity="center"
+        />
 
     <Button
         android:id="@+id/simple_questions"
+        android:layout_below="@id/title_app"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_margin="20dp"
         android:background="@drawable/button_effect"
-        android:text="Simple Questions"
+        android:text="@string/simple"
         android:textAllCaps="false"
         android:textSize="25sp"
 
@@ -26,7 +37,7 @@
         android:layout_below="@id/simple_questions"
         android:layout_margin="20dp"
         android:background="@drawable/button_effect"
-        android:text="Tough Questions"
+        android:text="@string/tough"
         android:textAllCaps="false"
         android:textSize="25sp"
 
@@ -41,7 +52,7 @@
         android:layout_alignTop="@+id/simple_questions"
         android:layout_marginRight="45dp"
         android:background="@drawable/button_effect"
-        android:text="See our other app"
+        android:text="@string/other"
         android:textAllCaps="false"
         android:textSize="25sp" />
 
@@ -52,7 +63,7 @@
         android:layout_alignBottom="@+id/tough_questions"
         android:layout_alignLeft="@+id/other_app"
         android:background="@drawable/button_effect"
-        android:text="Rate App"
+        android:text="@string/rate"
         android:textAllCaps="false"
         android:textSize="25sp" />
 

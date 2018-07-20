@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_ques">
+        <item>What is Android?</item>
+        <item>Who is the founder of Android?</item>
+        <item>Explain the Android application Architecture.</item>
+        <item>What are the code names of android?</item>
+        <item>What are the advantages of android?</item>
+        <item>Does android support other language than java?</item>
+        <item>What are the core building blocks of android?</item>
+        <item>What is activity?</item>
+        <item>What are the life cycle methods of android activity?</item>
+        <item>What is intent?</item>
+
+    </string-array>
+
+</resources>

@@ -4,55 +4,68 @@
     android:layout_height="match_parent"
     android:id="@+id/front_page_layout"
     android:background="@drawable/bg"
-    android:padding="30dp"
     >
+
+    <TextView
+        android:id="@+id/title_app"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#7a484848"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#c2c2c2"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/simple_questions"
+        android:layout_below="@id/title_app"
         android:layout_width="350dp"
         android:layout_height="90dp"
         android:layout_alignTop="@+id/other_app"
+        android:layout_marginLeft="50dp"
         android:background="@drawable/button_effect"
-        android:text="Simple Questions"
+        android:text="@string/simple"
         android:textAllCaps="false"
         android:textSize="25sp"
-        android:layout_alignLeft="@id/tough_questions" />
+        />
 
     <Button
         android:id="@+id/tough_questions"
         android:layout_width="350dp"
         android:layout_height="90dp"
-        android:layout_alignTop="@id/rate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
         android:background="@drawable/button_effect"
-        android:text="Tough Questions"
+        android:text="@string/tough"
         android:textAllCaps="false"
         android:textSize="25sp"
-        android:layout_marginLeft="79dp" />
+        />
 
     <Button
         android:id="@+id/other_app"
         android:layout_width="350dp"
         android:layout_height="90dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="89dp"
+        android:layout_marginTop="193dp"
         android:background="@drawable/button_effect"
-        android:text="See our other app"
+        android:text="@string/other"
         android:textAllCaps="false"
         android:textSize="25sp"
-        android:layout_alignLeft="@+id/rate" />
+        android:layout_alignLeft="@+id/rate_app" />
 
     <Button
         android:id="@+id/rate_app"
         android:layout_width="350dp"
         android:layout_height="90dp"
-
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/button_effect"
-        android:text="Rate App"
+        android:text="@string/rate"
         android:textAllCaps="false"
         android:textSize="25sp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="96dp" />
+        android:layout_marginRight="50dp" />
 
 </RelativeLayout>

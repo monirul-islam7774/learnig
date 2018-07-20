@@ -20,17 +20,20 @@
             android:id="@+id/current_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="xx/"
+            android:text="@string/current_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
+            android:textSize="25sp"
             />
         <TextView
             android:id="@+id/total_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yy"
+            android:text="@string/total_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
+            android:textSize="25sp"
+
 
             />
     </LinearLayout>
@@ -45,9 +48,9 @@
             android:id="@+id/questions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Questions"
+            android:text="@string/questions"
             android:textColor="#c2c2c2"
-            android:textSize="25sp"
+            android:textSize="35sp"
             android:textStyle="italic"
             />
         <ScrollView
@@ -65,8 +68,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:text="Press the BINOCULAR for answer"
-                    android:textSize="25sp"
+                    android:text="@string/answers"
+                    android:textSize="35sp"
                     android:textColor="#c2c2c2"
                     android:textStyle="italic"
                     />
@@ -84,22 +87,22 @@
 
         <Button
             android:id="@+id/prev_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:background="@drawable/left"
             />
         <Button
-            android:id="@+id/answer_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/show_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/binoculars"
+            android:background="@drawable/view_button"
             />
         <Button
             android:id="@+id/next_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:background="@drawable/right"
             />
 

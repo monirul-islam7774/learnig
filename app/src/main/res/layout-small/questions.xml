@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,24 +14,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="10"
+        android:layout_weight="8"
         android:gravity="center"
         >
         <TextView
             android:id="@+id/current_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="xx/"
+            android:text="@string/current_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
+            android:textSize="12sp"
             />
         <TextView
             android:id="@+id/total_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yy"
+            android:text="@string/total_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
+            android:textSize="12sp"
+
 
             />
     </LinearLayout>
@@ -39,15 +43,15 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="80"
-        android:layout_margin="20dp"
+        android:layout_margin="8dp"
         >
         <TextView
             android:id="@+id/questions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Questions"
+            android:text="@string/questions"
             android:textColor="#c2c2c2"
-            android:textSize="25sp"
+            android:textSize="12sp"
             android:textStyle="italic"
             />
         <ScrollView
@@ -65,8 +69,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:text="Press the BINOCULAR for answer"
-                    android:textSize="25sp"
+                    android:text="@string/answers"
+                    android:textSize="12sp"
                     android:textColor="#c2c2c2"
                     android:textStyle="italic"
                     />
@@ -79,29 +83,29 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="10"
+        android:layout_weight="12"
         android:gravity="center|center_horizontal">
 
         <Button
             android:id="@+id/prev_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:background="@drawable/left"
-            />
+            tools:ignore="ButtonStyle" />
         <Button
-            android:id="@+id/answer_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/binoculars"
-            />
+            android:id="@+id/show_button"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/view_button"
+            tools:ignore="ButtonStyle" />
         <Button
             android:id="@+id/next_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:background="@drawable/right"
-            />
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 

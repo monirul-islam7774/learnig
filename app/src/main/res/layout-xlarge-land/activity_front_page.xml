@@ -4,17 +4,26 @@
     android:layout_height="match_parent"
     android:id="@+id/front_page_layout"
     android:background="@drawable/bg"
-    android:padding="30dp"
     >
-
+    <TextView
+        android:id="@+id/title_app"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/app_name"
+        android:textColor="#c2c2c2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="#7a484848"
+        android:gravity="center"
+        />
     <Button
         android:id="@+id/simple_questions"
         android:layout_width="450dp"
         android:layout_height="120dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="151dp"
+        android:layout_marginTop="210dp"
         android:background="@drawable/button_effect"
-        android:text="Simple Questions"
+        android:text="@string/simple"
         android:textAllCaps="false"
         android:textSize="35sp"
         android:layout_alignParentLeft="true"
@@ -27,7 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="160dp"
         android:background="@drawable/button_effect"
-        android:text="Tough Questions"
+        android:text="@string/tough"
         android:textAllCaps="false"
         android:textSize="35sp"
         android:layout_alignLeft="@+id/simple_questions" />
@@ -38,9 +47,9 @@
         android:layout_height="120dp"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/simple_questions"
-        android:layout_marginRight="45dp"
+        android:layout_marginRight="90dp"
         android:background="@drawable/button_effect"
-        android:text="See our other app"
+        android:text="@string/other"
         android:textAllCaps="false"
         android:textSize="35sp" />
 
@@ -51,7 +60,7 @@
         android:layout_alignBottom="@+id/tough_questions"
         android:layout_alignLeft="@+id/other_app"
         android:background="@drawable/button_effect"
-        android:text="Rate App"
+        android:text="@string/rate"
         android:textAllCaps="false"
         android:textSize="35sp" />
 
