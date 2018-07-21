@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_ans">
+        <item>Android is an open-source,
+            linux-based operating system that is used
+            in mobiles, tablets, televisions etc.
+        </item>
+        <item>
+            Andy Rubin.
+        </item>
+        <item>
+           Following is a list of components of Android application architecture:\n\n
+
+            Services: Used to perform background functionalities.\n\n
+            Intent: Used to perform the inter connection between activities
+                    and the data passing mechanism.\n\n
+            Resource Externalization: strings and graphics.\n\n
+            Notification: light, sound, icon, notification, dialog box and toast.\n\n
+            Content Providers: It will share the data between applications.
+        </item>
+        <item>
+            Aestro\n\n
+            Blender\n\n
+            Cupcake\n\n
+            Donut\n\n
+            Eclair\n\n
+            Froyo\n\n
+            Gingerbread\n\n
+            Honeycomb\n\n
+            Ice Cream Sandwitch\n\n
+            Jelly Bean\n\n
+            Kitkat\n\n
+            Lollipop\n\n
+            Marshmallow\n\n
+            Nougat\n\n
+            Oreo
+        </item>
+        <item>
+            Open-source: It means no licence, distribution and development fee.\n\n
+
+            Platform-independent: It supports windows, mac and linux platforms.\n\n
+
+            Supports various technologies: It supports camera, bluetooth, wifi,
+                         speech, EDGE etc. technologies.\n\n
+
+            Highly optimized Virtual Machine: Android uses highly optimized virtual machine
+                         for mobile devices, called DVM (Dalvik Virtual Machine).
+        </item>
+        <item>
+            Yes, android app can be developed in C/C++ also using android NDK (Native Development Kit).
+            It makes the performance faster. It should be used with android SDK.\n\n
+        </item>
+        <item>
+            The core building blocks of android are:\n\n
+
+                Activity\n\n
+                View\n\n
+                Intent\n\n
+                Service\n\n
+                Content Provider\n\n
+                Fragment etc.
+        </item>
+        <item>
+            Activity is like a frame or window in java that represents GUI.
+            It represents one screen of android.
+        </item>
+        <item>
+            There are 7 life-cycle methods of activity. They are as follows:\n\n
+
+            onCreate()\n\n
+            onStart()\n\n
+            onResume()\n\n
+            onPause()\n\n
+            onStop()\n\n
+            onRestart()\n\n
+            onDestroy()
+        </item>
+        <item>
+            It is a kind of message or information that is passed to the components.
+            It is used to launch an activity, display a web page, send sms, send email etc.
+            There are two types of intents in android:\n\n
+
+            Implicit Intent\n\n
+            Explicit Intent\n\n
+        </item>
+        <item>
+            Implicit intent is used to invoke the system components.
+        </item>
+        <item>
+            Explicit intent is used to invoke the activity class.
+        </item>
+        <item>
+            Intent i = new Intent(getApplicationContext(), ActivityTwo.class);\n
+            startActivity(i);
+        </item>
+        <item>
+            A service is a component that runs in the background. It is used to play music,
+            handle network transaction etc.
+        </item>
+        <item>
+            SQLite: An opensource and lightweight relational database for mobile devices.
+        </item>
+        <item>
+            AAPT is an acronym for android asset packaging tool. It handles the packaging process.
+        </item>
+        <item>
+            Content providers are used to share information between android applications.
+        </item>
+        <item>
+            Fragment is a part of Activity. By the help of fragments, we can display multiple screens
+            on one activity.
+        </item>
+        <item>
+            ADB stands for Android Debug Bridge. It is a command line tool that is used to communicate
+            with the emulator instance.
+        </item>
+        <item>
+            NDK stands for Native Development Kit. By using NDK, you can develop a part of app using
+            native language such as C/C++ to boost the performance.
+        </item>
+        <item>
+            ANR stands for Application Not Responding. It is a dialog box that appears if the application
+            is no longer responding.
+        </item>
+        <item>
+            The Google Android SDK is a toolset which is used by developers to write apps on Android
+            enabled devices. It contains a graphical interface that emulates an Android driven handheld
+            environment and allow them to test and debug their codes.
+        </item>
+        <item>
+            APK is a short form stands for Android Packaging Key. It is a compressed key with classes,
+            UI's, supportive assets and manifest. All files are compressed to a single file is called APK.
+        </item>
+        <item>
+            Android applications are written by using the java (Android SDK) and C/C++ (Android NDK).
+        </item>
+        <item>
+            ADT stands for Android Development Tool. It is used to develop the applications and test
+            the applications.
+        </item>
+
+
+
+    </string-array>
+</resources>

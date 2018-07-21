@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -20,7 +21,7 @@
             android:id="@+id/current_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="xx/"
+            android:text="@string/current_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
             />
@@ -28,7 +29,7 @@
             android:id="@+id/total_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yy"
+            android:text="@string/total_number"
             android:textColor="#c2c2c2"
             android:textStyle="italic"
 
@@ -45,10 +46,10 @@
             android:id="@+id/questions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Questions"
+            android:text="@string/questions"
             android:textColor="#c2c2c2"
             android:textSize="25sp"
-            android:textStyle="italic"
+            android:textStyle="italic|bold"
             />
         <ScrollView
             android:id="@+id/answer_scroll_view"
@@ -65,10 +66,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:text="Press the BINOCULAR for answer"
-                    android:textSize="25sp"
+                    android:text="@string/answers"
+                    android:textSize="20sp"
                     android:textColor="#c2c2c2"
-                    android:textStyle="italic"
                     />
             </LinearLayout>
 
@@ -84,24 +84,25 @@
 
         <Button
             android:id="@+id/prev_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/left"
-            />
+            tools:ignore="ButtonStyle" />
         <Button
-            android:id="@+id/answer_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/show_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/binoculars"
-            />
+            android:background="@drawable/view_button"
+            tools:ignore="ButtonStyle" />
+
         <Button
             android:id="@+id/next_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/right"
-            />
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 

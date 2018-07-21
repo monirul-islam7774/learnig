@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Learning</string>
+    <string name="app_name">Learning App</string>
+    <string name="simple">Simple Questions</string>
+    <string name="tough">Tough Questions</string>
+    <string name="other">See our other app</string>
+    <string name="rate">Rate app</string>
+    <string name="current_number">xx/</string>
+    <string name="total_number">yy</string>
+    <string name="questions">Questions</string>
+    <string name="answers">Press the VIEW button for answer</string>
 </resources>

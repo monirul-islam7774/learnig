@@ -4,54 +4,72 @@
     android:layout_height="match_parent"
     android:id="@+id/front_page_layout"
     android:background="@drawable/bg"
-    android:padding="30dp"
     >
+
+    <TextView
+        android:id="@+id/title_app"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/app_name"
+        android:textColor="#c2c2c2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="#7a484848"
+        android:gravity="center"
+        />
 
     <Button
         android:id="@+id/simple_questions"
+        android:layout_below="@id/title_app"
         android:layout_width="60dp"
         android:layout_height="40dp"
+        android:layout_alignParentTop="true"
         android:background="@drawable/button_effect"
-        android:text="Simple Questions"
+        android:text="@string/simple"
         android:textAllCaps="false"
         android:textSize="10sp"
-        android:layout_alignLeft="@+id/tough_questions" />
+        android:layout_toLeftOf="@id/other_app"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        />
 
     <Button
         android:id="@+id/tough_questions"
         android:layout_width="60dp"
-        android:layout_height="69dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/simple_questions"
-        android:layout_marginBottom="38dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="41dp"
         android:background="@drawable/button_effect"
-        android:text="Tough Questions"
+        android:text="@string/tough"
         android:textAllCaps="false"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:layout_alignLeft="@id/simple_questions" />
 
     <Button
         android:id="@+id/other_app"
+        android:layout_below="@id/title_app"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/simple_questions"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_effect"
-        android:text="See our other app"
+        android:text="@string/other"
         android:textAllCaps="false"
         android:textSize="10sp"
-        android:layout_alignLeft="@+id/rate" />
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp" />
 
     <Button
         android:id="@+id/rate_app"
-        android:layout_width="70dp"
-        android:layout_height="38dp"
-        android:layout_below="@id/other_app"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/tough_questions"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/tough_questions"
         android:background="@drawable/button_effect"
-        android:text="Rate App"
+        android:text="@string/rate"
         android:textAllCaps="false"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/tough_questions"
+        android:layout_marginLeft="20dp"
+        />
 
 </RelativeLayout>
