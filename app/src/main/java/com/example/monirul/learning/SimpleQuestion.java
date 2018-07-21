@@ -49,6 +49,7 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
 
             case R.id.prev_button:
                 answer.setText("Press the VIEW button to see the answer");
+                showButton.setBackgroundResource(R.drawable.view);
                 index--;
                 if (index == -1){
 
@@ -78,6 +79,7 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
 
             case R.id.next_button:
                 answer.setText("Press the VIEW button to see the answer");
+                showButton.setBackgroundResource(R.drawable.view);
                 index++;
                 if(index == simpleQuestion.length){
                     index = 0;

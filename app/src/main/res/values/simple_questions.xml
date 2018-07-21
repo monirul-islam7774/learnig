@@ -11,6 +11,21 @@
         <item>What is activity?</item>
         <item>What are the life cycle methods of android activity?</item>
         <item>What is intent?</item>
+        <item>What is implicit intent in android?</item>
+        <item>What is explicit intent in android?</item>
+        <item>How to call another activity in android?</item>
+        <item>What is service in android?</item>
+        <item>What is the name of database used in android?</item>
+        <item>What is AAPT?</item>
+        <item>What is content provider?</item>
+        <item>What is fragment?</item>
+        <item>What is ADB?</item>
+        <item>What is NDK?</item>
+        <item>What is ANR?</item>
+        <item>What is the Google Android SDK?</item>
+        <item>What is an APK format?</item>
+        <item>Which language does Android support to develop an application?</item>
+        <item>What is ADT in Android?</item>
 
     </string-array>
 
