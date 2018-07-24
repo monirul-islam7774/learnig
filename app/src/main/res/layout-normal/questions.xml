@@ -84,22 +84,22 @@
 
         <Button
             android:id="@+id/prev_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/left"
             tools:ignore="ButtonStyle" />
         <Button
             android:id="@+id/show_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/view_button"
             tools:ignore="ButtonStyle" />
         <Button
             android:id="@+id/next_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/right"
             tools:ignore="ButtonStyle" />
 

@@ -2,11 +2,13 @@ package com.example.monirul.learning;
 
 import android.content.Intent;
 import android.os.Debug;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class FrontPage extends AppCompatActivity implements View.OnClickListener{
 
@@ -24,6 +26,10 @@ public class FrontPage extends AppCompatActivity implements View.OnClickListener
         toughQuestion = findViewById(R.id.tough_questions);
         otherApp =   findViewById(R.id.other_app);
         rateApp = (Button)findViewById(R.id.rate_app);
+
+        LinearLayout frontPage = findViewById(R.id.frontpage_titlebar_layout);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.frontpage_title_bar);
 
         simpleQuestion.setOnClickListener(this);
         toughQuestion.setOnClickListener(this);

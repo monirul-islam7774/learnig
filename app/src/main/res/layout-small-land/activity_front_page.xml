@@ -6,7 +6,7 @@
     android:background="@drawable/bg"
     >
 
-    <TextView
+    <!--<TextView
         android:id="@+id/title_app"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -16,11 +16,10 @@
         android:textStyle="bold"
         android:background="#7a484848"
         android:gravity="center"
-        />
+        />-->
 
     <Button
         android:id="@+id/simple_questions"
-        android:layout_below="@id/title_app"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
@@ -47,7 +46,6 @@
 
     <Button
         android:id="@+id/other_app"
-        android:layout_below="@id/title_app"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"

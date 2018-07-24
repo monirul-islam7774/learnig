@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="80"
+        android:layout_weight="72"
         android:layout_margin="20dp"
         >
         <TextView
@@ -78,19 +78,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="12"
-        android:gravity="center|center_horizontal">
+        android:layout_weight="20"
+        android:gravity="center_horizontal|center_vertical"
+        >
 
         <Button
             android:id="@+id/prev_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/left"
             tools:ignore="ButtonStyle" />
         <Button
             android:id="@+id/show_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/view_button"
@@ -98,8 +99,8 @@
 
         <Button
             android:id="@+id/next_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/right"
             tools:ignore="ButtonStyle" />
 
