@@ -1,6 +1,7 @@
 package com.example.monirul.learning;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBar;
@@ -11,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.monirul.learning.models.SimpleQuestionModel;
+
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class SimpleQuestion extends AppCompatActivity implements View.OnClickListener{
@@ -18,14 +22,16 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
     Button prevButton,showButton,nextButton,startButton,stopButton;
     int index;
 
-    String[] simpleQuestion;
-    String[] simpleAnswer;
+    ArrayList<SimpleQuestionModel> simpleQuestionList;
 
     //Variables and TextToSpeech object
     TextToSpeech textToSpeechObject;
     int result;
     int flag;
 
+    private static final String default_answer = "Press the VIEW button to see the answer";
+
+    @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questions);
@@ -57,10 +63,8 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
         showButton  = findViewById(R.id.show_button);
         nextButton  = findViewById(R.id.next_button);
 
-        //Importing the string arrays from strings.xml file
-        simpleQuestion = getResources().getStringArray(R.array.simple_ques);
-        simpleAnswer = getResources().getStringArray(R.array.simple_ans);
 
+        this.initSimpleQuestionList();
         //Adding listener to buttons
         prevButton.setOnClickListener(this);
         showButton.setOnClickListener(this);
@@ -68,10 +72,10 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
 
         //Setting up values to our variables and textviews
         index = 0;
-        question.setText(simpleQuestion[index]);
-        answer.setText("Press the VIEW button to see the answer");
+        question.setText(simpleQuestionList.get(index).getQuestion());
+        answer.setText(default_answer);
         currentNumber.setText(String.valueOf(index+1));
-        totalNumber.setText("/"+String.valueOf(simpleQuestion.length));
+        totalNumber.setText("/"+simpleQuestionList.size());
 
 
         //Initialization of textToSpeech object and listener added
@@ -93,36 +97,50 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
 
     }
 
+    private void initSimpleQuestionList() {
+        this.simpleQuestionList = new ArrayList<>();
+        String[] question = getResources().getStringArray(R.array.simple_ques);
+        String[] answer   = getResources().getStringArray(R.array.simple_ans);
+        //Importing the string arrays from strings.xml file
+        for (int i = 0; i < question.length; i++){
+            this.simpleQuestionList.add(new SimpleQuestionModel(question[i], answer[i], false));
+        }
+    }
+
+
     @Override
     public void onClick(View view) {
 
         switch (view.getId()){
 
             case R.id.prev_button:
-                answer.setText("Press the VIEW button to see the answer");
+                simpleQuestionList.get(index).setAnswerVisible(false);
+                answer.setText(default_answer);
                 showButton.setBackgroundResource(R.drawable.view);
                 textToSpeechObject.stop();
                 index--;
                 if (index == -1){
 
-                    index = simpleAnswer.length-1;
-                    question.setText(simpleQuestion[index]);
+                    index = simpleQuestionList.size()-1;
+                    question.setText(simpleQuestionList.get(index).getQuestion());
                     currentNumber.setText(String.valueOf(index+1));
                 }
                 else {
-                    question.setText(simpleQuestion[index]);
+                    question.setText(simpleQuestionList.get(index).getQuestion());
                     currentNumber.setText(String.valueOf(index+1));
                 }
 
                 break;
 
             case R.id.show_button:
-                if (answer.getText()== "Press the VIEW button to see the answer"){
-                    answer.setText(simpleAnswer[index]);
+                if (!simpleQuestionList.get(index).isAnswerVisible()){
+                    answer.setText(simpleQuestionList.get(index).getAnswer());
                     showButton.setBackgroundResource(R.drawable.hide);
+                    simpleQuestionList.get(index).setAnswerVisible(true);
                 }
                 else{
-                    answer.setText("Press the VIEW button to see the answer");
+                    simpleQuestionList.get(index).setAnswerVisible(false);
+                    answer.setText(default_answer);
                     showButton.setBackgroundResource(R.drawable.view);
                     textToSpeechObject.stop();
                 }
@@ -131,17 +149,18 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.next_button:
-                answer.setText("Press the VIEW button to see the answer");
+                simpleQuestionList.get(index).setAnswerVisible(false);
+                answer.setText(default_answer);
                 showButton.setBackgroundResource(R.drawable.view);
                 textToSpeechObject.stop();
                 index++;
-                if(index == simpleQuestion.length){
+                if(index == simpleQuestionList.size()){
                     index = 0;
-                    question.setText(simpleQuestion[index]);
+                    question.setText(simpleQuestionList.get(index).getQuestion());
                     currentNumber.setText(String.valueOf(index+1));
                 }
                 else {
-                    question.setText(simpleQuestion[index]);
+                    question.setText(simpleQuestionList.get(index).getQuestion());
                     currentNumber.setText(String.valueOf(index+1));
                 }
 
@@ -155,9 +174,9 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
                     Toast.makeText(getApplicationContext(),"Feature not supported in your device",Toast.LENGTH_SHORT).show();
 
                 }
-                else if(answer.getText().toString().equals(simpleAnswer[index])){
+                else if(answer.getText().toString().equals(simpleQuestionList.get(index).getAnswer())){
 
-                    textToSpeechObject.speak(simpleAnswer[index],TextToSpeech.QUEUE_FLUSH,null);
+                    textToSpeechObject.speak(simpleQuestionList.get(index).getAnswer(),TextToSpeech.QUEUE_FLUSH,null);
                     flag=1;
 
                 }
@@ -173,6 +192,7 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
                 if (textToSpeechObject != null){
 
                     textToSpeechObject.stop();
+                    flag = 0;
 
                 }
                 break;
@@ -198,16 +218,16 @@ public class SimpleQuestion extends AppCompatActivity implements View.OnClickLis
 
             textToSpeechObject.stop();
 
+
         }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (answer.getText().toString().equals(simpleAnswer[index]) && flag == 1){
+        if (answer.getText().toString().equals(simpleQuestionList.get(index).getAnswer()) && flag == 1){
 
-            textToSpeechObject.speak(simpleAnswer[index],TextToSpeech.QUEUE_FLUSH,null);
-            flag = 0;
+            textToSpeechObject.speak(simpleQuestionList.get(index).getAnswer(),TextToSpeech.QUEUE_FLUSH,null);
         }
     }
 

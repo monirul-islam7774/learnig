@@ -9,4 +9,6 @@
     <string name="total_number">yy</string>
     <string name="questions">Questions</string>
     <string name="answers">Press the VIEW button for answer</string>
+    <string name="Title_text">Exit</string>
+    <string name="messgage_text">Are you sure, you want to exit?</string>
 </resources>

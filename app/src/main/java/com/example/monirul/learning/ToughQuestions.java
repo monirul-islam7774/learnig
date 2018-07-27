@@ -195,6 +195,7 @@ public class ToughQuestions extends AppCompatActivity implements View.OnClickLis
 
             textToSpeechObject.speak(toughAnswer[index],TextToSpeech.QUEUE_FLUSH,null);
             flag = 0;
+
         }
     }
 
